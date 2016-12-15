@@ -1,12 +1,69 @@
 <template>
-  
-  
+  <div class="circle" style="">
+    <div class="left-wrap">
+      <div class="loader"></div>
+    </div>
+    <div class="right-wrap">
+      <div class="loader"></div>
+    </div>
+    <div class="inner-circle"></div>
+  </div>
 </template>
 
 <script>
-  // 
+  export default {
+    props:{
+      radius:{
+          type:Number,
+          default: 100,
+        },
+        percent: {
+          type: Number,
+          default:0,
+        }
+      }
+    data() {
+      return {
+        
+    
+      } 
+    }  
+    
+  }
 </script>
 
 <style>
-
+   .circle{
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-color: #e3e3e3;
+  }
+  left-wrap{
+    overflow:hidden;  
+    position: absolute;
+    top:0;
+  }
+  right-wrap {
+    position: absolute;
+  }
+    
+  loader:{
+    position:absolute;
+    left:0;
+    top:0;
+    border-radius:1000;
+  },
+  
+  inner-circle: {
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    align-items: 'center',
+  },
+  text: {
+    font-size 11;
+    color: #888;
+  }
 </style>

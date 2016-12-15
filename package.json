@@ -1,6 +1,6 @@
 {
   "name": "weex-percentage-circle",
-  "version": "0.9.1",
+  "version": "0.9.4",
   "description": "a component for pecentage circle",
   "main": "index.js",
   "scripts": {
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/JackPu/weex-percentage-circle/issues"
   },
-  "homepage": "https://github.com/JackPu/weex-percentage-circle#readme"
+  "homepage": "https://github.com/JackPu/weex-percentage-circle#readme",
+  "dependencies": {
+    "react-native-percentage-circle": "^1.0.2"
+  }
 }
