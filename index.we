@@ -1,69 +1,93 @@
 <template>
-  <div class="circle" style="">
-    <div class="left-wrap">
-      <div class="loader"></div>
+  <div class="circle" style="width:{{radius*2}};height:{{radius*2}};border-radius:{{radius}}">
+    <div class="left-wrap" style="width:{{radius}};height:{{radius*2}};left:0;">
+      <div class="loader" "left:{{radius}};width:{{radius}};height:{{radius*2}};border-top-left-radius:0;border-bottom-left-radius:0;background-color:{{color}};translateX:{{radius/2}};rotate:{{rightTransformerDegree}};translateX:{{radius/2}}"></div>
     </div>
-    <div class="right-wrap">
-      <div class="loader"></div>
+    <div class="left-wrap" style="width:{{radius}};height:{{radius*2}};left:{{radius}};">
+      <div class="loader" style="left:{{radius}};width:{{radius}};height:{{radius*2}};border-top-right-radius:0;border-bottom-right-radius:0;background-color:{{color}};translateX:{{radius/2}};rotate:{{rightTransformerDegree}};translateX:{{radius/2}}"></div>
     </div>
-    <div class="inner-circle"></div>
+    <div class="inner-circle" style="width:{{(radius - borderWidth)*2}};height:{{(radius - borderWidth)*2}};border-radius:{{radius - borderWidth}};background-color: #fff;">
+       <Text>{{this.props.percent}}%</Text>
+    </div>
   </div>
 </template>
 
 <script>
+  function getDegree(percent) {
+    let leftTransformerDegree = '0deg';
+    let rightTransformerDegree = '0deg';
+    if(percent >= 50) {
+      rightTransformerDegree = '180deg';
+      leftTransformerDegree = (percent-50)*3.6 + 'deg';
+    }else {
+      rightTransformerDegree = percent * 3.6 + 'deg'; 
+    }
+    return {
+      l: leftTransformerDegree,
+      r: rightTransformerDegree
+    }    
+  }
+    
   export default {
     props:{
-      radius:{
-          type:Number,
-          default: 100,
-        },
-        percent: {
-          type: Number,
-          default:0,
-        }
+      radius2:{
+        type:Number,
+        default: 100,
+      },
+      percent: {
+        type: Number,
+        default:0,
       }
+    },
+    
     data() {
       return {
-        
-    
+        radius:100,
+        color: '#1ba1e2',
+        leftTransformerDegree: getDegree(80)['l'],
+        rightTransformerDegree: getDegree(80)['r'],
+        //borderWidth: this.props.borderWidth < 2 || !this.props.borderWidth ? 2 : this.props.borderWidth,
+        borderWidth: 3,
       } 
-    }  
+    },
+    
+    methods: {
+      
+      
+    },
     
   }
 </script>
 
 <style>
    .circle{
-    overflow: hidden;
     position: relative;
     justify-content: center;
     align-items: center;
-    background-color: #e3e3e3;
+    background-color:#e3e3e3;
   }
-  left-wrap{
-    overflow:hidden;  
+  .left-wrap{
     position: absolute;
     top:0;
   }
-  right-wrap {
+  .right-wrap {
     position: absolute;
   }
     
-  loader:{
+  .loader{
     position:absolute;
     left:0;
     top:0;
     border-radius:1000;
-  },
+  }
   
-  inner-circle: {
-    overflow: hidden;
+  .inner-circle {
     position: relative;
     justify-content: center;
-    align-items: 'center',
-  },
-  text: {
-    font-size 11;
+    align-items: center;
+  }
+  .text {
+    font-size: 11;
     color: #888;
   }
 </style>
