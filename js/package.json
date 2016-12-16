@@ -2,7 +2,7 @@
   "name": "weex-percentage-circle",
   "version": "1.0.0",
   "description": "a component for pecentage circle",
-  "main": "src/weex-percentage-circle.we",
+  "main": "./weex-percentage-circle.we",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -33,7 +33,7 @@
 </style>
 
 <script>
-  require('../../src/weex-percentage-circle.we')
+  require('weex-pc')
   module.exports = {
     data: {
       message: 'Welcome to Use Weexpack!',

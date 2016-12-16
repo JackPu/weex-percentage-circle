@@ -4,11 +4,7 @@ weex-percentage-circle is a component which supports you define your percent and
 
  <img width="360" src="./shots/weex-percenate-circle.png"/>
 
-
-
-React Native Version >= 0.25
-
-React-Native-Percentage-Cirlce is a component which supports you define your percent and draw the circle.And also you can use it as a progress bar.
+shots:
 
 <img width="480" src="./shots/QQ20161216-200259@2x.png"/>
 
