@@ -37,7 +37,7 @@ npm i weex-percentage-circle --save
 </style>
 
 <script>
-  require('../../src/weex-percentage-circle.we')
+  require('weex-percentage-circle')
 
 </script>
 
