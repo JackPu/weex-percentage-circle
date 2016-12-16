@@ -22,36 +22,13 @@
     xmlns:rim="http://www.blackberry.c"
     id="weex-percentage-circle"
     version="1.0.0">
-    <name>weex-percentage-circle</name>
+    <name>WeexPercentageCircle</name>
     <description>weex event module</description>
     <license>Apache 2.0</license>
     <keywords>weex,event</keywords>
-    <repo>https://github.com/weexteam/weex-plugins</repo>
-    <issue>https://github.com/weexteam/weex-plugins/issues</issue>
+    <repo>https://github.com/JackPu/weex-percentage-circle</repo>
+    <issue>https://github.com/JackPu/weex-percentage-circle/issues</issue>
 
-     <!-- ios -->
-     <platform name="ios">
-         
-         <config-file target="config.xml" parent="/*">
-             <feature name="module">
-                 <param name="ios-package" value="WXEventModule" />
-                 <param name="api" value="event" />
-             </feature>
-             <preference name="CameraUsesGeolocation" value="false" />
-         </config-file>
-         
-         <header-file src="native/ios/WXEventModule.h" />
-         <source-file src="native/ios/WXEventModule.m" />
-         
-         <framework src="ImageIO.framework" weak="true" />
-         <framework src="CoreLocation.framework" />
-         <framework src="CoreGraphics.framework" />
-         <framework src="AssetsLibrary.framework" />
-         <framework src="MobileCoreServices.framework" />
-         <framework src="CoreGraphics.framework" />
-         <framework src="AVFoundation.framework" />
-
-     </platform>
 
 
 

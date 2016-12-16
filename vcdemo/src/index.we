@@ -1,8 +1,16 @@
 <template>
   <div class="container">
-      <image src="http://ata2-img.cn-hangzhou.img-pub.aliyun-inc.com/7d42775b8f0d0c86589082dc9ee179c2.png" class="bannar-image"/>
-      <text class="message">{{ message }}</text>
-      <text class="quotes">{{ quotes }}</text>    
+     <text class="hd">Weex-Percentage-Circle</text>
+     <div class="item">
+        <weex-percentage-circle  color="#1ba1e2" percent="30" radius="100"></weex-percentage-circle> 
+     </div>
+    <div class="item">
+        <weex-percentage-circle border-width="2" color="#000" percent="80" radius="100"></weex-percentage-circle> 
+     </div>
+    <div class="item">
+        <weex-percentage-circle border-width="5" color="#e74c3c" percent="100" radius="60"></weex-percentage-circle> 
+     </div>
+     
   </div>
 </template>
 
@@ -13,24 +21,19 @@
     align-self: center;
     align-items: center;
   }
-
-  .bannar-image{
-    width:200;
-    height:200;
+  .hd{
+    padding-top:20;
+    padding-bottom: 20;
+    font-size: 22;
   }
-  .message{
-    padding-top: 20;
-    padding-bottom: 40;
-    color: #0055dd;
-    font-size: 28; 
-  }
-  .quotes{
-    font-size: 16;
-    color:#666; 
+  .item{
+    flex:1;
+    margin-bottom: 20;
   }
 </style>
 
 <script>
+  require('../../src/weex-percentage-circle.we')
   module.exports = {
     data: {
       message: 'Welcome to Use Weexpack!',
